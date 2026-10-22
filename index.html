@@ -366,53 +366,55 @@
     </div>
 
     <script>
-          const workoutData = {
+         const defaultWorkoutData = {
             day1: {
                 badge: "DZIEŃ 1",
-                title: "Plecy + Biceps + Nogi",
+                subTitle: "Push (Pchnięcie)",
+                title: "Push: Klatka + Barki + Triceps",
                 exercises: [
-                    { id: "d1_ex1", name: "1. Przysiady na suwnicy / ze sztangą", sets: 3, targetReps: "8–10", tempo: "2121", rir: "3", tag: "NOGI" },
-                    { id: "d1_ex2", name: "2. Ściąganie drążka nachwytem", sets: 4, targetReps: "10–12", tempo: "2121", rir: "3", tag: "PLECY" },
-                    { id: "d1_ex3", name: "3. Wiosłowanie wyciąg dolny podchwytem", sets: 3, targetReps: "12", tempo: "2121", rir: "3", tag: "PLECY" },
-                    { id: "d1_ex4", name: "4. Ściąganie uchwytu wyciągu jednorącz", sets: 3, targetReps: "10–15", tempo: "2121", rir: "3", tag: "PLECY" },
-                    { id: "d1_ex5", name: "5. Ugięcia na modlitewniku (sztanga łamana)", sets: 3, targetReps: "12", tempo: "1221", rir: "3", tag: "BICEPS" },
-                    { id: "d1_ex6", name: "6. Ugięcia młotkowe z hantlami", sets: 2, targetReps: "15", tempo: "—", rir: "3", tag: "BICEPS" },
-                    { id: "d1_ex7", name: "7. Przyciąganie nóg do brzucha w zwisie", sets: 3, targetReps: "20", tempo: "—", rir: "3", tag: "BRZUCH" }
+                    { id: "d1_ex1", name: "1. Wyciskanie sztangi na ławce poziomej", sets: 4, targetReps: "6–8", tempo: "3110", rir: "2", tag: "KLATA", videoId: "GxXifj9_y5o", tips: "Stopy mocno oparte o podłogę, ściągnięte łopatki, zachowaj naturalny łuk lędźwiowy." },
+                    { id: "d1_ex2", name: "2. Wyciskanie hantli na skosie dodatnim", sets: 3, targetReps: "8–10", tempo: "2011", rir: "2", tag: "KLATA", videoId: "Pqde13uj33E", tips: "Kąt ławki 30-45 stopni. Opuszczaj hantle szeroko, rozciągając klatkę piersiową." },
+                    { id: "d1_ex3", name: "3. OHP (Wyciskanie żołnierskie nad głowę)", sets: 3, targetReps: "8–10", tempo: "2111", rir: "2", tag: "BARKI", videoId: "kJArfak9Zno", tips: "Napięty brzuch i pośladki. Prowadź sztangę blisko twarzy w fazie wyciskania." },
+                    { id: "d1_ex4", name: "4. Wznosy hantli bokiem", sets: 4, targetReps: "12–15", tempo: "2011", rir: "1", tag: "BARKI", videoId: "EKOGhyOKPF0", tips: "Lekki skłon tułowia w przód, łokcie prowadzą ruch do góry." },
+                    { id: "d1_ex5", name: "5. Francuskie wyciskanie ze sztangą łamaną", sets: 3, targetReps: "10–12", tempo: "3010", rir: "2", tag: "TRICEPS", videoId: "2z8JmcrW-As", tips: "Ramiona nieruchome, opuszczaj sztangę za linię czubka głowy." },
+                    { id: "d1_ex6", name: "6. Prostowanie ramion z linką wyciągu", sets: 3, targetReps: "12–15", tempo: "2011", rir: "1", tag: "TRICEPS", videoId: "8_33og5lN-Y", tips: "Łokcie przyklejone do tułowia, w dolnej pozycji pełny wyprost z dopięciem." }
                 ]
             },
             day2: {
                 badge: "DZIEŃ 2",
-                title: "Barki + Triceps + Nogi",
+                subTitle: "Pull (Ciągnięcie)",
+                title: "Pull: Plecy + Tył barku + Biceps",
                 exercises: [
-                    { id: "d2_ex1", name: "1. Uginanie nóg leżąc/siedząc na maszynie", sets: 3, targetReps: "10–12", tempo: "2011", rir: "3", tag: "NOGI" },
-                    { id: "d2_ex2", name: "2. OHP (Wyciskanie żołnierskie)", sets: 3, targetReps: "8–15", tempo: "2131", rir: "3", tag: "BARKI" },
-                    { id: "d2_ex3", name: "3. Wznosy hantli do boku siedząc", sets: 3, targetReps: "20", tempo: "2121", rir: "3", tag: "BARKI" },
-                    { id: "d2_ex4", name: "4. Y-raise z hantlami (skos 30°)", sets: 2, targetReps: "12", tempo: "1121", rir: "3", tag: "BARKI" },
-                    { id: "d2_ex5", name: "5. Prostowanie linki wyciągu jednorącz", sets: 3, targetReps: "10", tempo: "—", rir: "3", tag: "TRICEPS" },
-                    { id: "d2_ex6", name: "6. Francuz leżąc oburącz sztangą łamaną", sets: 3, targetReps: "10–15", tempo: "1121", rir: "3", tag: "TRICEPS" },
-                    { id: "d2_ex7", name: "7. Allahy na wyciągu górnym", sets: 3, targetReps: "12–15", tempo: "—", rir: "3", tag: "BRZUCH" }
+                    { id: "d2_ex1", name: "1. Klasyczny Martwy Ciąg", sets: 3, targetReps: "5", tempo: "2010", rir: "2", tag: "PLECY", videoId: "op9kVnSso6Q", tips: "Sztanga nad środkiem stóp, plecy idealnie proste, mocny wywóz z pięt." },
+                    { id: "d2_ex2", name: "2. Ściąganie drążka wyciągu górnego do klatki", sets: 3, targetReps: "10–12", tempo: "2011", rir: "2", tag: "PLECY", videoId: "QoCMWLeA0g4", tips: "Klatka wypukła do przodu, ruch inicjowany opuszczeniem łopatek." },
+                    { id: "d2_ex3", name: "3. Wiosłowanie hantlem jednorącz w oparciu", sets: 3, targetReps: "10", tempo: "2011", rir: "2", tag: "PLECY", videoId: "pMoYH0OpvXw", tips: "Pociągaj hantel w kierunku biodra, unikaj rotacji tułowia." },
+                    { id: "d2_ex4", name: "4. Face Pull na wyciągu", sets: 3, targetReps: "15", tempo: "2012", rir: "1", tag: "BARKI", videoId: "rep-qVOkqgk", tips: "Przyciągaj sznur do wysokości oczu, rotując zewnętrzne ramiona." },
+                    { id: "d2_ex5", name: "5. Uginanie przedramion ze sztangą prostą", sets: 3, targetReps: "10–12", tempo: "3010", rir: "2", tag: "BICEPS", videoId: "kwG2ipFRgfo", tips: "Łokcie stabilne przy bokach tułowia, pełny zakres ruchu." },
+                    { id: "d2_ex6", name: "6. Uginanie hantlami z supinacją na skosie", sets: 3, targetReps: "12", tempo: "3011", rir: "1", tag: "BICEPS", videoId: "soMR_nD5c-g", tips: "Oparcie na ławce skośnej pozwala na mocne rozciąganie dolnej fazy." }
                 ]
             },
             day3: {
                 badge: "DZIEŃ 3",
-                title: "Klata + Przedramię + Nogi",
+                subTitle: "Legs (Nogi)",
+                title: "Legs: Nogi + Brzuch",
                 exercises: [
-                    { id: "d3_ex1", name: "1. Prostowanie nóg na maszynie", sets: 3, targetReps: "12–15", tempo: "2011", rir: "3", tag: "NOGI" },
-                    { id: "d3_ex2", name: "2. Wyciskanie na ławce płaskiej", sets: 3, targetReps: "5–8", tempo: "—", rir: "3", tag: "KLATA" },
-                    { id: "d3_ex3", name: "3. Wyciskanie hantli na skosie 45°", sets: 2, targetReps: "12", tempo: "3121", rir: "3", tag: "KLATA" },
-                    { id: "d3_ex4", name: "4. Rozpiętki na bramie z góry", sets: 3, targetReps: "10–15", tempo: "1131", rir: "3", tag: "KLATA" },
-                    { id: "d3_ex5", name: "5. Ugięcia nadgarstków na wyciągu dolnym", sets: 3, targetReps: "12", tempo: "—", rir: "3", tag: "PRZEDRAMIĘ" }
+                    { id: "d3_ex1", name: "1. Przysiady ze sztangą na plecach (Back Squat)", sets: 4, targetReps: "6–8", tempo: "3010", rir: "2", tag: "NOGI", videoId: "M_2HxAzg_vg", tips: "Głęboki przysiad z zachowaniem prostych pleców, kolana zgodnie z palcami stóp." },
+                    { id: "d3_ex2", name: "2. Rumuński Martwy Ciąg (RDL)", sets: 3, targetReps: "8–10", tempo: "3011", rir: "2", tag: "NOGI", videoId: "AWIzVCGszz0", tips: "Ruch w tył biodrami, sztanga sunie blisko piszczeli, mocne rozciąganie dwugłowych." },
+                    { id: "d3_ex3", name: "3. Wypychanie ciężaru na suwnicy (Leg Press)", sets: 3, targetReps: "10–12", tempo: "2011", rir: "1", tag: "NOGI", videoId: "IZxyjW7MPJQ", tips: "Stopy stabilnie na platformie na szerokość bioder." },
+                    { id: "d3_ex4", name: "4. Uginanie nóg leżąc na maszynie", sets: 3, targetReps: "12", tempo: "2011", rir: "1", tag: "NOGI", videoId: "a7BwYyQZ19k", tips: "Biodra dociśnięte do ławki przez cały czas trwania serii." },
+                    { id: "d3_ex5", name: "5. Allahy na wyciągu górnym (brzuch)", sets: 3, targetReps: "15", tempo: "2011", rir: "1", tag: "BRZUCH", videoId: "6h5lq-b8LCU", tips: "Praca wyłącznie z poziomu spięcia mięśni brzucha, biodra w bezruchu." }
                 ]
             },
             day4: {
                 badge: "DZIEŃ 4",
-                title: "Dedykowany Dzień Nóg",
+                subTitle: "Upper (Góra)",
+                title: "Upper: Góra Ciała (Siła i Hipertrofia)",
                 exercises: [
-                    { id: "d4_ex1", name: "1. Przysiady ze sztangą / Suwnica", sets: 4, targetReps: "6–10", tempo: "2121", rir: "3", tag: "NOGI" },
-                    { id: "d4_ex2", name: "2. Rumuński Martwy Ciąg (RDL)", sets: 3, targetReps: "8–10", tempo: "3121", rir: "3", tag: "NOGI" },
-                    { id: "d4_ex3", name: "3. Suwnica / Przysiady bułgarskie", sets: 3, targetReps: "10–12", tempo: "2011", rir: "3", tag: "NOGI" },
-                    { id: "d4_ex4", name: "4. Uginanie nóg na maszynie (dwugłowe)", sets: 3, targetReps: "12–15", tempo: "2011", rir: "3", tag: "NOGI" },
-                    { id: "d4_ex5", name: "5. Wspięcia na palce stojąc / siedząc", sets: 4, targetReps: "15–20", tempo: "2121", rir: "3", tag: "ŁYDKI" }
+                    { id: "d4_ex1", name: "1. Wyciskanie hantli na ławce poziomej", sets: 3, targetReps: "8–10", tempo: "2011", rir: "2", tag: "KLATA", videoId: "VmB1G1K7v94", tips: "Pełny zakres ruchu z mocnym zbliżeniem hantli u góry." },
+                    { id: "d4_ex2", name: "2. Wiosłowanie sztangą w opadzie tułowia", sets: 3, targetReps: "8–10", tempo: "2011", rir: "2", tag: "PLECY", videoId: "vT2GjY_Umpw", tips: "Tułów równolegle lub lekko skośnie do podłoża, pociąganie w rejon pępka." },
+                    { id: "d4_ex3", name: "3. Wyciskanie hantli nad głowę siedząc", sets: 3, targetReps: "10", tempo: "2011", rir: "2", tag: "BARKI", videoId: "qETuuBbX7r0", tips: "Stabilne oparcie ławki, kontrolowane opuszczanie ciężaru." },
+                    { id: "d4_ex4", name: "4. Ściąganie drążka wyciągu podchwytem", sets: 3, targetReps: "10–12", tempo: "2011", rir: "1", tag: "PLECY", videoId: "eE_Hx3nCHsw", tips: "Angażuje mocno mięśnie najszersze i bicepsy." },
+                    { id: "d4_ex5", name: "5. Superseria: Ugięcia hantlami z rotacją + Wyciskanie francuskie", sets: 3, targetReps: "12", tempo: "2011", rir: "1", tag: "RAMIONA", videoId: "supersets_arm", tips: "Wykonaj ćwiczenie na biceps bez przerwy przechodząc do tricepsa." }
                 ]
             }
         };
